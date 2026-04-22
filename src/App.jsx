@@ -16,10 +16,10 @@ function App() {
 
   return (
     <div className="flex h-screen">
-      <Sidebar setPage={setPage} />
+      <Sidebar setPage={setPage} page={page} />
 
       <div className="flex-1 flex flex-col">
-        <Navbar />
+        <Navbar page={page} />
         {renderPage()}
       </div>
     </div>
