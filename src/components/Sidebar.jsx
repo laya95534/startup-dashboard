@@ -1,3 +1,5 @@
+import { LayoutDashboard, Users, UserPlus } from "lucide-react";
+
 function Sidebar({ setPage }) {
   return (
     <div className="w-64 bg-gray-900 text-white p-5 h-full">
@@ -6,26 +8,23 @@ function Sidebar({ setPage }) {
       <ul className="space-y-4">
         <li
           onClick={() => setPage("dashboard")}
-          className="cursor-pointer hover:text-gray-300"
+          className="cursor-pointer flex items-center gap-2 hover:text-gray-300"
         >
-          Dashboard
+          <LayoutDashboard size={18} /> Dashboard
         </li>
 
         <li
-          onClick={() => {
-            console.log("Team clicked");
-            setPage("team");
-          }}
-          className="cursor-pointer hover:text-gray-300"
+          onClick={() => setPage("team")}
+          className="cursor-pointer flex items-center gap-2 hover:text-gray-300"
         >
-          Team
+          <Users size={18} /> Team
         </li>
 
         <li
           onClick={() => setPage("candidates")}
-          className="cursor-pointer hover:text-gray-300"
+          className="cursor-pointer flex items-center gap-2 hover:text-gray-300"
         >
-          Candidates
+          <UserPlus size={18} /> Candidates
         </li>
       </ul>
     </div>
